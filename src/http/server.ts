@@ -26,7 +26,7 @@ app.register(getWeekSummaryRoute);
 
 const Run = async () => {
   try {
-    const listening = await app.listen({ port: Number(env.PORT) });
+    const listening = await app.listen({ port: Number(env.PORT) || 3333 });
     if (listening)
       return console.log(`Server running at http://localhost:${env.PORT}`);
   } catch (error) {
