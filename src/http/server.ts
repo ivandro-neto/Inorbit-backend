@@ -14,7 +14,7 @@ import fastifyCors from "@fastify/cors";
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
 app.register(fastifyCors, {
-  origin: "https://inorbit-eta.vercel.app/",
+  origin: ["https://inorbit-eta.vercel.app/", "https://inorbit-q425oflwo-ivandro-netos-projects.vercel.app/", "https://inorbit-git-main-ivandro-netos-projects.vercel.app/"],
 });
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
