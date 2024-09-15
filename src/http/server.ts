@@ -27,10 +27,6 @@ app.register(getWeekSummaryRoute);
 const Run = async () => {
   try {
     const listening = await app.listen({ port: Number(env.PORT) });
-
-    /*  if(!client)
-      throw new Error("Failed making the connection to database, verify if its running eg.: on Docker")
-     */
     if (listening)
       return console.log(`Server running at http://localhost:${env.PORT}`);
   } catch (error) {
